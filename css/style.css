@@ -1,0 +1,433 @@
+/* Estilos generales del body */
+body {
+    font-family: "Orbitron", sans-serif; 
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #e0e0e0;
+    background: #1a1a2e url('../img/fondo-futurista.png') no-repeat center center fixed;
+    background-size: cover;
+    
+}
+
+/* ==========================Estilos para encabezados============= */
+h1, h2, h3 {
+    font-family: "Michroma", sans-serif; /* Usando Michroma para encabezados */
+    color: #00bcd4; 
+    text-align: center;
+    margin-bottom: 20px;
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+/*=========================Estilo de los parrafos===============*/
+@font-face{
+    src: url(../font/KodeMono-Regular.ttf);
+    font-family: KodeMono;
+}
+p{
+    font-family: KodeMono;
+    font-weight: 400;
+}
+/* ===============Estilos para enlaces generales================== */
+a {
+    color: #00bcd4;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #ff00ff;
+}
+
+/* ==================Estilos del encabezado principal (header)================== */
+header {
+    background-color: #1a1a2ede; 
+    padding: 1rem 0;
+    border-bottom: 2px solid #00bcd4;
+    position: sticky; /* ======OJO no tocar =)====Menú fijo============= */
+    top: 0;
+    z-index: 1000; /*==== Esta propieda Asegura que esté por encima de otros elementos ======*/
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    color: #00bcd4;
+}
+
+/* =========Estilos del menú de navegación (nav) ===========*/
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: #e0e0e0; 
+    font-weight: 700;
+    padding: 10px 15px;
+    border-radius: 15px;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+nav ul li a:hover {
+    background-color: rgba(0, 188, 212, 0.2); /* ====Sutil fondo al pasar el cursor====*/
+    color: #ff00ff;
+    transform: translateY(-2px); /* =====Pequeño efecto de elevación =======0*/
+}
+
+/* ========Estilos del contenido principal (main) =============*/
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: rgba(0, 0, 0, 0.5); /*======= Fondo semitransparente=======*/
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+ aside > ul{
+    margin-left: 30px;
+ }
+
+/* ==========Estilos de las secciones =========*/
+section {
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: rgba(30, 30, 46, 0.8); /* ======Fondo de tarjeta semitransparente======= */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* ===========Sección "Sobre Mí"========== */
+.section-sobremi .con-tenedor01 { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+}
+
+.section-sobremi img { 
+    border-radius: 50%;
+    border: 3px solid #00bcd4;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    width: 150px;
+    height: 150px;
+    
+}
+
+.section-sobremi .texto-principal01 { 
+    max-width: 800px;
+}
+
+.lista-habilidades01{
+    padding-right: 20PX;
+}
+
+.section-sobremi .lista-habilidades01 { 
+    background-color: rgba(0, 188, 212, 0.1);
+    border-left: 5px solid #00bcd4; 
+    padding: 15px;
+    margin-top: 20px;
+    
+    border-radius: 0 8px 8px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.section-sobremi .lista-habilidades01 ul { 
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.section-sobremi .lista-habilidades01 ul li { 
+    background-color: rgba(0, 188, 212, 0.1); 
+    color: #00bcd4; 
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.9em;
+    font-weight: 700;
+}
+
+
+
+
+/*=========================esto es un prueba I yo trasteando cosas AYUDAAAA===============*/
+/* ========Estilos para cada habilidad (<li>)======== */
+li{
+    color: #00bcd4;
+    
+}
+
+.lista-habilidades01 li {
+    position: relative; /*===IMPORTANTE Clave para el z-index =====*/
+    z-index: 1; /*==IMPORTANTE==== Asegura que el texto esté encima ======*/
+    padding: 12px 22px;
+    margin: 10px;
+    border-radius: 25px;
+    font-size: 1rem;
+    color: #e0f7fa;
+    text-align: center;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    
+}
+
+/*============= El pseudo-elemento para el borde que cambia de color========== */
+.lista-habilidades01 li::before {
+    content: ""; /*====esta propieda se usa para generar un contenedor basio y poder colocar los colores de los bordes=======*/
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: conic-gradient(
+        from 0deg at 50% 50%,
+        #00eeff,
+        #4b0082,
+        #a200ff
+        );
+    z-index: -2; /*==IMPORTANTE colocamos los colores detras==== */
+    animation: rotate 4s linear infinite;
+}
+
+/* ========El pseudo-elemento que actúa como el fondo de la pastilla =======*/
+.lista-habilidades01 li::after {
+    content: "";
+    position: absolute;
+    inset: 2px;
+    background: #0b2f3a;
+    border-radius: 23px;
+    z-index: -1; /* ====IMPORTANTEColócalo entre el fondo de color y el gradiente===== */
+}
+
+/* =======La animación de rotación======= */
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+ /*hasta aqui es la prueba de trateo fue una locura ir probando cada cosa y investigando no lo vuelvo hacer*/
+
+/* ==========Sección "Proyectos"============= */
+.section-proyectos .con-tenedor02 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.tarjeta-proyecto01 { 
+    background-color: rgba(30, 30, 46, 0.9); 
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #00bcd4; 
+}
+
+.tarjeta-proyecto01:hover { 
+    transform: translateY(-8px);
+    box-shadow: 0 8px 16px rgba(0, 205, 205, 0.6);
+    border-color: #ff00ff; /* Magenta brillante */
+}
+
+.tarjeta-proyecto01 img { 
+    max-width: 100%;
+    height: 200px; 
+    object-fit: cover; /* ===Recorta la imagen para que encaje sin distorsionarse ====*/
+    border-radius: 8px;
+    margin-bottom: 15px;
+    border: 2px solid #00bcd4;
+}
+
+.tarjeta-proyecto01 h3 { 
+    font-size: 1.5em;
+    margin-top: 0;
+    color: #00bcd4; 
+}
+
+.tarjeta-proyecto01 p { 
+    font-size: 0.95em;
+    color: #e0e0e0; 
+}
+
+/* ==========Sección Contacto===========*/
+.section-contacto .con-tenedor03 {
+    text-align: center;
+}
+
+.section-contacto .con-tenedor03 ul { 
+    list-style: none;
+    padding: 0;
+    display: flex; /* ======Cambiado a flex para control total======= */
+    flex-direction: column; 
+    align-items: center; /* ======Centra los elementos verticalmente======= */
+    gap: 15px; /* =======Espacio entre los elementos======= */
+    margin-top: 20px;
+}
+
+.section-contacto .con-tenedor03 ul li { 
+    width: fit-content; /* Ajusta el ancho al contenido */
+}
+
+.section-contacto .con-tenedor03 ul li a { 
+    display: block; /* ===Para que la sombra y el hover apliquen al área de la imagen==== */
+    padding: 10px; /* ====Padding para que la sombra no se "pegue" a la imagen==== */
+    border-radius: 5px;
+    background-color: rgba(0, 188, 212, 0.1); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease;
+}
+
+.section-contacto .con-tenedor03 ul li a:hover { 
+    transform: translateY(-5px) scale(1.05); /*===== Efecto de elevación y zoom ======*/
+    box-shadow: 0 10px 20px rgba(0, 205, 205, 0.8), 0 0 15px rgba(255, 0, 255, 0.6);
+    background-color: rgba(0, 188, 212, 0.4); 
+}
+
+.section-contacto .con-tenedor03 ul li img { 
+    width: 40px; 
+    height: auto;
+    vertical-align: middle;
+    filter: drop-shadow(0 0 5px rgba(0, 188, 212, 0.7));
+    transition: filter 0.3s ease;
+}
+
+.section-contacto .con-tenedor03 ul li a:hover img { 
+    filter: drop-shadow(0 0 10px #ff00ff); 
+}
+
+/* =========Estilos del pie de página (footer)==========*/
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    background-color: #1a1a2e; 
+    border-top: 2px solid #ff00ff; 
+    color: #e0e0e0; 
+    font-size: 0.9em;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* ============ Media Queries para diseño responsivo============  */
+
+/* ============ Estilos para tabletas y escritorios pequeños (desde 770px)============  */
+@media (min-width: 770px) {
+    
+    .section-sobremi .con-tenedor01 {
+        flex-direction: row; 
+        align-items: flex-start; 
+        text-align: left;
+    }
+    
+    .section-sobremi img { 
+        margin-right: 20px; 
+        margin-bottom: 0; 
+    }
+
+    .section-sobremi .texto-principal01 {
+        flex: 1; /*============  Permitir que el texto ocupe el espacio restante ============ */
+    }
+
+    .section-sobremi .lista-habilidades01 {
+        width: 100%; 
+        margin-top: 20px;
+    }
+
+    .section-sobremi .lista-habilidades01 ul { 
+        justify-content: flex-start; 
+    }
+
+    /* ============ Navegación============  */
+    nav ul {
+        justify-content: center; 
+    }
+
+    /* ============ Contacto============  */
+    .section-contacto .con-tenedor03 ul { 
+        flex-direction: row; 
+        justify-content: center;
+    }
+}
+
+/*==============HASTA AQUI ES EL PROYECYO MAS DEBAJO ESTOY PROBANDO COSAS===========*/
+/* Estilos para móviles (hasta 760px) */
+@media (max-width: 760px) {
+   
+    body {
+        overflow-x: auto;
+    }
+    
+    /* ============ Encabezado============  */
+    header {
+        padding: 1rem 0.5rem;
+    }
+    
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    /* ============ Navegación============  */
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    /* ============ Contenido principal============  */
+    main {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    /* ============ Secciones============  */
+    section {
+        margin-bottom: 20px;
+        padding: 15px;
+    }
+
+    
+    .section-sobremi .con-tenedor01 {
+        flex-direction: column; 
+        align-items: center;
+        text-align: center;
+    }
+
+    .section-sobremi img {
+        margin-bottom: 15px; /*============  Añade espacio debajo de la imagen============  */
+    }
+
+   
+    .section-sobremi .lista-habilidades01 ul { 
+        justify-content: center; 
+    }
+
+   
+    .section-proyectos .con-tenedor02 { 
+        grid-template-columns: 1fr; /* ============ Una sola columna para proyectos en móviles ============ */
+    }
+
+   
+    .tarjeta-proyecto01 img {
+        height: auto; /*============ Mantener la proporción de la imagen============  */
+    }
+
+   
+    .section-contacto .con-tenedor03 ul { 
+        flex-direction: column;
+        align-items: center;
+    }
+}
